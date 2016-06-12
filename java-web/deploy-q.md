@@ -4,6 +4,9 @@
 
 ```
 ls target/classes/*
+➜  pelpa-web git:(master) ls target/pelpa/WEB-INF/classes/org/popkit/leap/monitor
+BuildingExcutorPool$1.class  BuildingTask.class  entity                      FetcherExcutorPool.class  RoundStatusMonitor.class  RoundSupervisor.class
+BuildingExcutorPool.class    EachActor.class     FetcherExcutorPool$1.class  FetcherTask.class         RoundSupervisor$1.class   utils
 ```
 
 果然有个.class文件仍然存在。
