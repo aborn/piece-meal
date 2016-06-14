@@ -3,7 +3,7 @@
 
 ## 全局变量
 全局变量是应用于Lisp系统的所有地方，一次只能是一个值，通过**setq**这个Special Form
-来表示，如下：
+来设置全局变量的值，如下：
 ```elisp
 (setq x '(a b))
 ```
@@ -61,3 +61,33 @@ defvar symbol [value [doc-string]]
 ```elisp
 defconst symbol value [doc-string]
 ```
+举例如下：
+```elisp
+(defconst float-pi 3.141592653589793 "The value of Pi.")
+```
+
+## 定义可定制化的变量(Defining Customization Variables)
+可定制化的变量也称为用户选项(User Options),它是全局的Lisp变量,它的值可通过定制接口
+来重新设置,采用**defcustom**这个宏来定义：
+```elisp
+defcustom option standard doc [keyword value]. . .
+```
+standard表示默认值（如果用户没设置时）。  
+defcustom这个宏接收以下keyword
+1. :type type 数据类型  
+2. :options value-list 合法的取值列表  
+3. :set setfunction 指定setfunction作为改变的方式  
+4. :get getfunction 指定获得方式  
+5. :initialize function 初始化函数  
+..  
+指定:require这个keyword非常有用，表明打开一种特性。
+下面是一个例子
+```elisp
+(defcustom save-place nil
+  "Non-nil means automatically save place in each file..."
+  :type ’boolean
+  :require ’saveplace
+  :group ’save-place)
+```
+
+## 其他
