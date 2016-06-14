@@ -3,7 +3,7 @@
 (Customize interface)来达到相同的效果
 
 ## 分类
-定制化项分为以下三类：
+定制化项分为以下三类：  
 1. 定制化变量，采用defcustom这个宏来定义  
 2. 定制化界面(customizable faces),采用defface来定义  
 3. 定制化组(customization groups),采用defgroup来定义  
