@@ -17,3 +17,9 @@
 6. :package-version ’(package . version)  
 
 ## defgroup
+语法如下：  
+```elisp
+defgroup group members doc [keyword value]. . .
+```
+定义一个可定制的group,并声明其成员,注意，大部分时间members是nil。一般是通过
+:group来指定成员
