@@ -30,3 +30,6 @@ Special Form来定义局部变量：下面是两个例子，
      (z y))
     (list y z));    结果是 (1 1),因为y采用的是局部的那个值，这就是let*与let的区别
 ```
+这里要注意多个变量最外层有一对(),否则会报  
+Wrong number of arguments: (lambda (arg)
+
