@@ -31,5 +31,33 @@ Special Form来定义局部变量：下面是两个例子，
     (list y z));    结果是 (1 1),因为y采用的是局部的那个值，这就是let*与let的区别
 ```
 这里要注意多个变量最外层有一对(),否则会报  
-Wrong number of arguments: (lambda (arg)
+Wrong number of arguments: (lambda (arg)  
+变量可以是buffer-local bindings(只跟buffer有关)
 
+## 变量为void与nil的区别
+注意在elisp语言环境里，nil是一个lisp的对象，而说一个变量为void表示为unassigned
+value，对一个void变量求值为报错void-variable error，而nil不会。
+
+## 声明全局变量
+一个变量的声明表示你将用一个symbol作为全局变量。采用两种Special Form来实现：
+**defvar** 或者 **defconst**  
+
+变量的声明有三层含义:  
+1. 告诉阅读代码的人该symbol是一个特殊的用途（作为变量）  
+2. 告诉Lisp系统可初始化，并有文档说明  
+3. 提供一个编程的工具。  
+
+defvar与defconst的主要区别在于用途，表示这个变量的值是否会变化。Lisp不会阻止你改变
+用defconst来定义的变量。defconst是无条件初始化的。
+
+### defvar
+defvar语法如下：  
+```elisp
+defvar symbol [value [doc-string]]
+```
+
+### defconst
+它定义一个symbol作为变量，并初始化，其语法如下:  
+```elisp
+defconst symbol value [doc-string]
+```
