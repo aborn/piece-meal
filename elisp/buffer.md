@@ -37,3 +37,13 @@
 with-temp-buffer body...  
 它在一个临时的buffer里执行body里的表达式,并将这个temp buffer作为当前buffer.当body里的
 表达式执行完成后kill掉temp buffer，返回原来的buffer
+
+
+## 创建buffer
+```elisp
+get-buffer-create buffer-or-name
+```
+创建一个buffer,如果buffer已经存在，则返回之。相反另一个函数是每次都产生一个buffer名字唯一的buffer。  
+```elisp
+generate-new-buffer name
+```
