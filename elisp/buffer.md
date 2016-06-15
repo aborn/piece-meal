@@ -47,3 +47,17 @@ get-buffer-create buffer-or-name
 ```elisp
 generate-new-buffer name
 ```
+
+## buffer操作
+
+### 清空buffer
+清空buffer，有以下两种方式实现：  
+```
+erase-buffer  
+delete-region start end
+```
+### 插入文本内容
+在buffer的当前点插入文本内容  
+insert &rest args
+插入部分其他buffer内容(内容从start到end)到当前buffer的当前点  
+insert-buffer-substring from-buffer-or-name &optional start end
