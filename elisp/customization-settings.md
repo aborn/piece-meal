@@ -3,13 +3,13 @@
 (Customize interface)来达到相同的效果
 
 ## 分类
-定制化项分为以下三类
+定制化项分为以下三类  
 1. 定制化变量，采用defcustom这个宏来定义  
 2. 定制化界面(customizable faces),采用defface来定义  
 3. 定制化组(customization groups),采用defgroup来定义  
 
 ## 通用关键字(Common Item Keywords)
-1. :group group 将定制化的荐归为组  
+1. :group group 将定制化的化归为组  
 2. :link link-data 包括一个额外链接,一般用于按钮  
 3. :load file 在显示定制化项目前载入一个文件  
 4. :require feature 当保存定制化值是执行(require 'feature)  
