@@ -28,11 +28,11 @@ export CATALINA_BASE=$CATALINA_HOME
                pattern="%h %l %u %t "%r" %s %b" />
 </Host>
 ```
-注意上面几个参数（参数说明可以参考[官网的doc](https://tomcat.apache.org/tomcat-7.0-doc/config/host.html)）：
-1. appBase 是应用的根目录，可设置为绝对目录，也可设置为相对目录。这里的相对目录是相对于**$CATALINA_HOME**的，如果没有设置默认的appBase值为webapps。
-2.  unpackWARs 如果你想将appBase目录下的war包文件解压成可查看的目录格式，将这个值设置为true。注意：在appBase外的war包不会被解压。
-3. autoDeploy 当tomcat运行过程中，这个值设置用来是否定期地去检查新的应用或更新应用。如果设置为*true*，tomcat会定期地去检查appBase和xmlBase目录，并部署新的应用。同时，当xml描述文件修改时也会触发tomcat重新reload应用。默认值为*true*。最好，这里将其设置为*false*，因为你希望手动部署它。
-4. xmlBase 基于这个host的xml配置的根目录，这个目录包含了要部署该host的XML描述文件。可设置为绝对目录，也可设置为相对目录（相对目录是相对于**$CATALINA_BASE**）。如果没有设置，默认目录为：*conf/<engine_name>/<host_name>*，如下*conf/Catalina/localhost*
+注意上面几个参数（参数说明可以参考[官网的doc](https://tomcat.apache.org/tomcat-7.0-doc/config/host.html)）：  
+1. appBase 是应用的根目录，可设置为绝对目录，也可设置为相对目录。这里的相对目录是相对于**$CATALINA_HOME**的，如果没有设置默认的appBase值为webapps。  
+2.  unpackWARs 如果你想将appBase目录下的war包文件解压成可查看的目录格式，将这个值设置为true。注意：在appBase外的war包不会被解压。  
+3. autoDeploy 当tomcat运行过程中，这个值设置用来是否定期地去检查新的应用或更新应用。如果设置为*true*，tomcat会定期地去检查appBase和xmlBase目录，并部署新的应用。同时，当xml描述文件修改时也会触发tomcat重新reload应用。默认值为*true*。最好，这里将其设置为*false*，因为你希望手动部署它。  
+4. xmlBase 基于这个host的xml配置的根目录，这个目录包含了要部署该host的XML描述文件。可设置为绝对目录，也可设置为相对目录（相对目录是相对于**$CATALINA_BASE**）。如果没有设置，默认目录为：*conf/<engine_name>/<host_name>*，如下*conf/Catalina/localhost*  
 ```shell
 ➜  apache-tomcat-7.0.54 pwd
 /home/popkit/software/apache-tomcat-7.0.54
