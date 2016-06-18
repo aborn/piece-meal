@@ -43,6 +43,11 @@ concat &rest sequences
 ```
 (concat "abc" nil "-def") ; "abc-def" 注意nil是空字符串
 ```
+### format
+下面是一个例子
+```elisp
+(format "The value of fill-column is %d. %s" fill-column "a")
+```
 
 ### split操作
 语法如下：
