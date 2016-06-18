@@ -2,6 +2,17 @@
 本节node学习字符串处理，在elisp环境中，字符串是字符的数组.但elips的字符串一但创建，无法修改。
 对于非ASCII编码的字符串，在elisp中有两种表示方式：**unibyte**和**multibyte**
 
+## 字符串表示
+字符串的的非ASCII(大于127)字符的表示有两种方式：
+### 多字节(multibyte)
+multibyte保存的是人可读的文本，每个字符对应的数值范围为0~4194303
+### 统一字节(unibyte)
+unibyte保存的是原始byte，每个字符对应一个byte，即它的值为0~255
+### 注意点
+But beware: If a string constant contains hexadecimal
+or octal escape sequences, and these escape sequences
+all specify unibyte characters (i.e., less than 256)
+
 ## 字符串长度
 计算字符串的长度函数是string-width,
 ```
