@@ -69,6 +69,14 @@ string= string1 string2
 ```
 注意函数string-equal与string=相同
 
+### suffix & prefix
+java程序中我们经常有这们的操作startWith及endWith，相应的elisp中有两个对应的函数
+*string-prefix-p* 与 *string-suffix-p*
+它们的语法类似  
+```elisp
+string-suffix-p suffx string &optional ignore-case
+```
+
 ### 数字与字符串的转换
 number-to-string number  
 string-to-number string &optional base  
