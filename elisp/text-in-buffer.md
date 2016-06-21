@@ -20,3 +20,7 @@ following-char
 
 
 ## 获得buffer的内容
+
+**buffer-substring start end** 这个返回在当前buffer中位于start与end中的文本拷贝。还有
+一个是与之类似的函数**buffer-substring-no-properties start end**，只不过后者不拷贝属性。
+要想获得整个buffer的字符串采用**buffer-string**函数。
