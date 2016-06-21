@@ -1,17 +1,19 @@
 # 变量
-本节note主要学习elips的变量
+变量是程序中的一个代表值的名字，在elisp中，变量通过lisp的symbol表示。变量名即为symbol的名，
+变量的值存储在symbol对应的值空间。
 
 ## 全局变量
-全局变量是应用于Lisp系统的所有地方，一次只能是一个值，通过**setq**这个Special Form
-来设置全局变量的值，如下：
+全局变量是应用于Lisp系统的所有地方。一次只能赋一个值，通过**setq**这个Special Form
+来设置全局变量的值（这个过程也称之为绑定），如下：
 ```elisp
 (setq x '(a b))
 ```
-是设置全局变量x的值为(a b)
+是设置全局变量x的值为(a b),注意：**setq**是一个Special Form,它不计算第一个参数（变量名），
+它计算第二个参数，将结果作为新的值。
 
 ## 常量
 有一种变量是自解析的，称之为常量。我们最常见的是**nil**和**t**这两个，还有一种是以':'开头
-的，这些称之为celled keywords,用keywordp函数可以判断是否为celled keywords:
+的，这些称之为原子(celled keywords),用keywordp函数可以判断是否为celled keywords:
 ```elisp
 (keywordp obj)
 ```
@@ -32,11 +34,14 @@ Special Form来定义局部变量：下面是两个例子，
 ```
 这里要注意多个变量最外层有一对(),否则会报  
 Wrong number of arguments: (lambda (arg)  
-变量可以是buffer-local bindings(只跟buffer有关)
+变量可以是buffer-local bindings(只跟buffer有关),局部变量也可多次绑定，采用**setq**来进行
+再次绑定。
 
 ## 变量为void与nil的区别
-注意在elisp语言环境里，nil是一个lisp的对象，而说一个变量为void表示为unassigned
-value，对一个void变量求值为报错void-variable error，而nil不会。
+注意在elisp语言环境里，nil是一个lisp的对象。说一个变量为void，表示这个变量的值空间还没
+被初始化(unassigned value)。对一个void变量求值为报错void-variable error，而nil不会。
+采用**makunbound symbol**取消绑定，将一个变量变成void，这个函数返回该变量的symbol。
+采用**boundp variable**来判断变量是否为void，当不为void时，返回*t*。
 
 ## 声明全局变量
 一个变量的声明表示你将用一个symbol作为全局变量。采用两种Special Form来实现：
