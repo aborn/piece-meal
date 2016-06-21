@@ -20,3 +20,15 @@ ELISP> kill-ring-max
 ```
 
 ## 与kill ring相关的操作函数
+
+**kill-region start end**区域start到end的文本将被killed（buffer中的文本将被删除），
+保存到kill-ring里。该函数的返回值永远为*nil*。在交互的操作中，*start*和*end*表示点或者mark。
+如果buffer是只读的，那么将报一个error*without modifying the buffer*。但文本仍然会保存到
+kill-ring的list里去。如果不想报这个error,将**kill-read-only-ok**选项值设置为non-nil。  
+
+**copy-region-as-kill start end** 类似kill-region函数，只不过，它不将文本killed。只
+会将文本放到kill-ring里。
+
+## 粘贴 (yanking)
+
+
