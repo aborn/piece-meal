@@ -22,6 +22,13 @@ ELISP> (json-read-from-string "{\"status\":\"success\",\"globel\":\"success\",\"
  (status . "success"))
 ```
 从上面的例子可以看出，它其实转化成了key-value的association list(alist)
+#### 解析数组
+下面是一个例子
+```
+ELISP> (setq ab/test (json-read-from-string "[{\"a\":\"aresult\"},{\"b\":\"bresult\"}]"))
+[((a . "aresult"))
+ ((b . "bresult"))]
+```
 
 ### json-read-file
 读取文件的内容，并转换成json
