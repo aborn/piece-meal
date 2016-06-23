@@ -16,6 +16,18 @@
 5. :version version 版本  
 6. :package-version ’(package . version)  
 
+## defcustom
+定义可定制化的变量，这称之为用户选项，语法如下：
+```
+defcustom option standard doc [keyword value]. . .
+```
+option为变量名，standard为变量的默认值，doc为其文档，后面就为keyword value这样的pair了.
+其中keyword可为以下几种：
+1. :type type 数据类型，可取舍为sexp,integer, number, float, string, regexp,
+character, file, directory, hook, symbol, function, variable, face, boolean,
+key-sequence, coding-system, color. 注意：如果你不想设置类型，或者类型是不确定的，
+那可以将其值设置为sexp。
+
 ## defgroup
 语法如下：  
 ```elisp
