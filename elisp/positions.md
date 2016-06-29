@@ -19,3 +19,4 @@
 ```elisp
 forward-char &optional count
 ```
+有一个相对应的**backward-char**函数
