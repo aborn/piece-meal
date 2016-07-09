@@ -14,3 +14,4 @@ lisp程序等待子进程执行结束后继续执行。异步的子进程不需�
 **call-process**、**call-process-region**，后两个是同步的，不返回process对象。
 
 ## 创建异步子进程
+关于elisp的异步，请参考我写的这篇博客
