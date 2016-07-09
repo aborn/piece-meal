@@ -41,14 +41,14 @@ process-status process-name
 process-live-p process
 ```
 如果子进程仍在alive，则返回non-nil。当一个子进程的状态为run, open, listen, connect 或 stop时，它被认为是alive的。  
-其他操作函数请参照手册。
 * 子进程退出时的状态信息，如果子进程仍在alive，刚返回0
 ```elisp
 process-exit-status process
 ```
+其他操作函数请参照手册。
 
 ## async包
-通过以上我们发现异操作真是很繁琐。要是我想异步地执行一个lamda函数？怎么办？  
+通过以上我们发现Emacs Lisp的异步操作真是很繁琐。要是我想异步地执行一个lamda函数？怎么办？  
 答：采用[async](https://github.com/jwiegley/emacs-async)这个异步包。该包可通过[melpa](https://melpa.org/#/async)和[popkit elpa](https://elpa.popkit.org/#/async)软件源安装。
 它显然是一个更好的选择。它的使用语法如下：  
 ```elisp
