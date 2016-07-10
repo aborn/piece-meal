@@ -10,3 +10,6 @@
 ```elisp
 defun name args [doc] [declare] [interactive] body. . .
 ```
+
+## 函数调用
+函数的调用有两种方式，**funcall**和**apply**

@@ -61,6 +61,14 @@ split-string string &optional separators omit-nulls trim
 (split-string "Soup is good food" "o") ;=>("S""upisg""""df""""d")
 (split-string "Soup is good food" "o" t) ;=> ("S" "up is g" "d f" "d")
 ```
+### join操作
+与split对应的是对string list的join操作，对应函数为**string-join**
+```elisp
+ELISP> (string-join '("a" "b") " ")
+"a b"
+ELISP> (string-join '("a" "b") ";")
+"a;b"
+```
 
 ### 字符串比较
 判断字符串相等采用:
