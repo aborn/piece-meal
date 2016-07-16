@@ -17,3 +17,8 @@ file-writable-p filename
 
 
 ## 文件夹操作函数
+* 创建文件夹**make-directory**,当文件夹不存在时:
+```elisp
+make-directory dirname &optional parents
+```
+最后一个参数*parent*如果non-nil，刚循环创建其parent directory.
