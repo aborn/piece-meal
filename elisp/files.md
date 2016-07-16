@@ -20,7 +20,7 @@ file-writable-p filename
 ```elisp
 make-directory dirname &optional parents
 ```
-最后一个参数*parent*如果non-nil，刚循环创建其parent directory.
+最后一个参数*parent*如果non-nil，则循环创建其parent directory.
 
 ## 文件路径操作
 **expand-file-name**，这个函数是将文件名转换成一个绝对文件名，语法如下：
