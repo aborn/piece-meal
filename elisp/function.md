@@ -11,5 +11,15 @@
 defun name args [doc] [declare] [interactive] body. . .
 ```
 
+## 函数参数
+有些参数是可选的，当用户没有传是，设置一个默认值，下面是一个例子：
+```elisp
+(defun piece-meal/fun-option-parameter (a &optional b)
+  (when (null b)
+    (message "paramete b is not provided")
+    (setq b "ddd"))    ;; set to default value
+  (message "a=%s, b=%s" a b))
+```
+
 ## 函数调用
 函数的调用有两种方式，**funcall**和**apply**
