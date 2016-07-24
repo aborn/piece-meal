@@ -23,7 +23,7 @@ ELISP> (add-to-list 'ab/debug '("c" . "c"))
 (cl-pushnew X PLACE [KEYWORD VALUE]...)
 ```
 插入元素X到PLACE,举个例子：
-```
+```elisp
 ELISP> (setq ab/debug '(("a" . "b") ("b" . "b")))
 (("a" . "b")
  ("b" . "b"))
@@ -32,6 +32,8 @@ ELISP> (cl-pushnew '("c" . "c") ab/debug)
  ("a" . "b")
  ("b" . "b"))
 ```
+注意：cl-pushnew这个函数返回的对象就是*PLACE*。
+
 另一个函数*push*也一样
 ```
 ELISP> (push '("c" . "c") ab/debug)
