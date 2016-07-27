@@ -15,6 +15,18 @@ file-executable-p filename
 file-writable-p filename
 ```
 
+### 文件名操作
+* file-name-directory filename 获得文件名目录地址值
+* file-name-nondirectory filename 非目录部分
+* file-name-extension filename &optional period 文件扩展名
+*  file-name-base &optional filename 不包含后缀和路径的扩展名
+```elisp
+ELISP> (file-name-base "/aborn/a.txt")
+"a"
+ELISP> (file-name-extension "/aborn/a.txt")
+"txt"
+```
+
 ## 文件夹操作函数
 * 创建文件夹**make-directory**,当文件夹不存在时:
 ```elisp
