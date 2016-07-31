@@ -7,7 +7,7 @@
 (mapcar function sequence) 
 ```
 它的作用是将function函数应用到sequence中的每个元素，然后返回一个结果列表。
-```
+```elisp
 (mapcar '1+ (list 1 2 3 4)) ; (2 3 4 5)
 (mapcar 'car '((1 2) (3 4) (5 6))) ; (1 3 5)
 ```
