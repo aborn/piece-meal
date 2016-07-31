@@ -41,7 +41,7 @@ mapc和mapcar操作一样，只不过，它返回的是nil
 ### 改变列表元素
 * (push x list) 添加元素到列表头，会改变原list，返回新的列表。注意返回的列表与原列表相等。
 与之相反的有一个pop操作
-```
+```elisp
 ELISP> (setq ab/debug '("a" "b" "c"))
 ("a" "b" "c")
 
