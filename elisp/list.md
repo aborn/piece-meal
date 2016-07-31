@@ -2,6 +2,19 @@
 
 ## 对列表元素的操作
 
+### 获取列表元素
+* (car list) 获取列表第一个元素
+* (nth n list) 获取列表第n个元素
+* (car (last list)) 获取列表最后一个元素
+
+### 获取子列表
+* (cdr list) 第二个到最后一个元素构成的列表
+* (nthcdr n list) 第n个到最后一个元素构成的列表
+* (butlast list n) 除去最后n个元素剩余的列表
+
+### 插入元素到列表头
+* (cons x list) 返回一个新的列表newList,其中x为(car newList),list为(cdr list)
+
 ### 添加元素到列表
 添加元素到列表有以下几种方式：
 * 用**add-to-list**函数
