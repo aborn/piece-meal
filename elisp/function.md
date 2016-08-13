@@ -11,6 +11,14 @@
 defun name args [doc] [declare] [interactive] body. . .
 ```
 
+## 检查一个函数是否定义
+检查一个函数是否定义
+```elisp
+(fboundp 'info)                         ; t
+(fboundp 'setq)                         ; t
+(fboundp 'xyz)                          ; nil
+```
+
 ## 函数参数
 有些参数是可选的，当用户没有传是，设置一个默认值，下面是一个例子：
 ```elisp
