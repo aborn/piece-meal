@@ -18,6 +18,14 @@
 (set 'a "aaa")
 ```
 
+## 检测变量是否被定义
+检测变量是否被定义，采用**boundp**
+```elisp
+(boundp 'load-path)                     ; t
+(boundp 'nil)                           ; t
+(boundp 'xyz)                           ; nil
+```
+
 ## 常量
 有一种变量是自解析的，称之为常量。我们最常见的是**nil**和**t**这两个，还有一种是以':'开头
 的，这些称之为原子(celled keywords),用keywordp函数可以判断是否为celled keywords:
