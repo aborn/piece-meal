@@ -11,6 +11,13 @@
 是设置全局变量x的值为(a b),注意：**setq**是一个Special Form,它不计算第一个参数（变量名），
 它计算第二个参数，将结果作为新的值。
 
+## set与setq
+**set**是一个内置函数，而setq是一个Special Form,他们的区别看如下例子(他们的作用是等价的)：
+```elisp
+(setq a "aaa")
+(set 'a "aaa")
+```
+
 ## 常量
 有一种变量是自解析的，称之为常量。我们最常见的是**nil**和**t**这两个，还有一种是以':'开头
 的，这些称之为原子(celled keywords),用keywordp函数可以判断是否为celled keywords:
