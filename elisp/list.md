@@ -66,7 +66,7 @@ ELISP> ab/debug2
 ```elisp
 add-to-list symbol element &optional append compare-fn
 ```
-功能为当element不在symbol对应的list中时，添加element元素到symbol对应的list。
+功能为当element不在symbol对应的list中时，添加element元素到symbol对应的list。如果元素已经存在，则不添加！
 下面为一个例子：
 ```elisp
 ELISP> (setq ab/debug '(("a" . "b") ("b" . "b")))
