@@ -1,26 +1,6 @@
 # 列表操作
 对于列表(List)，有很多相关的操作，如获取列表长度(length list)。下面介绍其相关操作
 
-## mapcar和mapc
-* **mapcar**的语法如下：
-```elisp
-(mapcar function sequence) 
-```
-它的作用是将function函数应用到sequence中的每个元素，然后返回一个结果列表。
-```elisp
-(mapcar '1+ (list 1 2 3 4)) ; (2 3 4 5)
-(mapcar 'car '((1 2) (3 4) (5 6))) ; (1 3 5)
-```
-mapc和mapcar操作一样，只不过，它返回的是nil
-
-## while操作
-```elisp
-(let ((myList '(a b c)))
-  (while myList
-    (message "%s" (pop myList))
-    (sleep-for 1)))
-```
-
 ## 对列表元素的操作
 
 ### 获取列表元素
@@ -112,4 +92,24 @@ ELISP> (push '("c" . "c") ab/debug)
 (("c" . "c")
  ("a" . "b")
  ("b" . "b"))
+```
+
+## 作用于list的函数
+* **mapcar**的语法如下：
+```elisp
+(mapcar function sequence) 
+```
+它的作用是将function函数应用到sequence中的每个元素，然后返回一个结果列表。
+```elisp
+(mapcar '1+ (list 1 2 3 4)) ; (2 3 4 5)
+(mapcar 'car '((1 2) (3 4) (5 6))) ; (1 3 5)
+```
+mapc和mapcar操作一样，只不过，它返回的是nil
+
+## while操作
+```elisp
+(let ((myList '(a b c)))
+  (while myList
+    (message "%s" (pop myList))
+    (sleep-for 1)))
 ```
