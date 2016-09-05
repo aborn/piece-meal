@@ -42,7 +42,7 @@ ELISP> ab/debug2
 
 ### 添加元素到列表
 添加元素到列表有以下几种方式：
-* 用**add-to-list**函数
+* 用**add-to-list**函数 (注意：改变了原始列表结构)
 ```elisp
 add-to-list symbol element &optional append compare-fn
 ```
