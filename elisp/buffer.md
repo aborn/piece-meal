@@ -6,6 +6,7 @@
 (buffer-name &optional buffer)     ;获取buffer名  
 (rename-buffer newname &optional unique) ;重命名当前buffer  
 (buffer-file-name &optional buffer)      ;返回buffer对应的file名  
+(save-buffer) ;保存当前buffer到对应的访问文件,绑定到*C-x C-s*
 
 ;切换<buffer-or-name>为当前buffer  
 ;这函数不显示buffer在任何window，用户对这个buffer不一定可见  
