@@ -9,6 +9,11 @@ lisp程序等待子进程执行结束后继续执行。异步的子进程不需�
 (processp object)
 ```
 
+## 常用与Process有关的函数
+```elisp
+(get-process "process-name")   ;; 通过process名字取到process对象
+```
+
 ## 创建子进程的函数
 有三个函数可以创建子进程，即**start-process**(异步，返回一个process对象)、
 **call-process**、**call-process-region**，后两个是同步的，不返回process对象。
