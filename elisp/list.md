@@ -7,8 +7,9 @@
 * (car list) 获取列表第一个元素
 * (nth n list) 获取列表第n+1个元素(n=0表示第一个元素)
 * (car (last list)) 获取列表最后一个元素
-* (memq object list) 判断object是否为list中的元素
-* (delq object list) 删除所有元素与object进行eq操作为t的元素 (注意：字符串列表不是eq)
+* (memq object list) 判断object是否为list中的元素 (注意：字符串列表不是eq)
+* (member object list) 与上面类似，但采用的是equal进行对比
+* (delq object list) 删除所有元素与object进行eq操作为t的元素 
 
 ### 获取子列表
 * (cdr list) 第二个到最后一个元素构成的列表
